@@ -1,0 +1,9 @@
+services:
+  - type: background
+    name: etsy-sold-screenshot
+    runtime: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install
+    startCommand: python etsy_sold_scraper.py
